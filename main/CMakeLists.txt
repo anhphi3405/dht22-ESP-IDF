@@ -8,3 +8,7 @@ idf_component_register(
     REQUIRES            # optional, list the public requirements (component names)
     PRIV_REQUIRES     # optional, list the private requirements
 )
+
+
+set(EXTRA_COMPONENT_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/../components/cardano-base")
+target_link_libraries(${COMPONENT_LIB} "-L${CMAKE_CURRENT_SOURCE_DIR}/../components/cardano-base -lcardano")
